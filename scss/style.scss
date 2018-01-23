@@ -10,6 +10,7 @@ $font: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
 }
 
+/*各種設定*/
 *,
 *:after,
 *:before {
@@ -97,41 +98,42 @@ a:focus {
 
 .header-title {
 	position: relative;
+
+	.header-title__main {
+		font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+		font-size: 3em;
+		font-weight: 400;
+		line-height: 1;
+		margin: 0em 0 0.15em 0;
+	}
+	
+	.header-title__part {
+		font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+		font-size: 0.85em;
+		font-weight: 400;
+		display: block;
+		padding: 0.5em 0 2em;
+		text-indent: 4px;
+		letter-spacing: 4px;
+		text-transform: uppercase;
+	}
+	
+	.header-title__part::before,
+	.header-title__part::after {
+		content: '\2014';
+		padding: 0 0.5em;
+	}
+	
+	.header-title__sub {
+		font-size: 0.55em;
+		font-weight: normal;
+		display: block;
+		margin: 0 auto;
+		padding: 0.5em 0 1em;
+		color: #d1d2d2;
+	}
 }
 
-.header-title__main {
-	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-	font-size: 3em;
-	font-weight: 400;
-	line-height: 1;
-	margin: 0em 0 0.15em 0;
-}
-
-.header-title__part {
-	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
-	font-size: 0.85em;
-	font-weight: 400;
-	display: block;
-	padding: 0.5em 0 2em;
-	text-indent: 4px;
-	letter-spacing: 4px;
-	text-transform: uppercase;
-}
-
-.header-title__part::before,
-.header-title__part::after {
-	content: '\2014';
-	padding: 0 0.5em;
-}
-
-.header-title__sub {
-	font-size: 0.55em;
-	font-weight: normal;
-	display: block;
-	margin: 0 auto;
-	padding: 0.5em 0 1em;
-	color: #d1d2d2;
-}
 
 .intro {
 	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
@@ -167,61 +169,6 @@ a:focus {
 	padding: 1em 0;
 	color: #464b4b;
 }
-
-
-/* Top Navigation Style */
-
-.codrops-links {
-	position: relative;
-	display: inline-block;
-	text-align: center;
-	white-space: nowrap;
-}
-
-.codrops-links::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 1px;
-	height: 100%;
-	background: rgba(255, 255, 255, 0.5);
-	-webkit-transform: rotate3d(0, 0, 1, 22.5deg);
-	transform: rotate3d(0, 0, 1, 22.5deg);
-}
-
-.codrops-icon {
-	display: inline-block;
-	width: 1.5em;
-	margin: 0.5em;
-	padding: 0em 0;
-	text-decoration: none;
-}
-
-.codrops-icon span {
-	display: none;
-}
-
-.codrops-icon:before {
-	font-family: 'codropsicons';
-	font-weight: normal;
-	font-style: normal;
-	font-variant: normal;
-	line-height: 1;
-	margin: 0 5px;
-	text-transform: none;
-	-webkit-font-smoothing: antialiased;
-	speak: none;
-}
-
-.codrops-icon--drop:before {
-	content: '\e001';
-	color: #09c;
-}
-
-.codrops-icon--prev:before {
-	content: '\e004';
-}
-
 
 /* Demo links */
 
@@ -435,5 +382,24 @@ a:focus {
 	.js-section {
 		width: 100%;
 		max-width: none;
+	}
+}
+
+
+.type {
+	float: left;
+	width: 33%;
+
+	.type-icon {
+		position: relative;
+	}
+
+	.text-contents {
+		width: 80%;
+		display: inline-block;
+		margin-top: 5px;
+		margin-bottom: 30px;
+		font-size: 30px;
+		color: #3B444B;
 	}
 }
