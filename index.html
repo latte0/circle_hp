@@ -6,121 +6,147 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<title>hogehoge circle</title>
-	<meta name="author" content="risae" />
 	<link rel="shortcut icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
-	<!--[if IE]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$(".scroll").click(function(event){
+			event.preventDefault();
+			var url = this.href;
+			var parts = url.split("#");
+			var target = parts[1];
+			var target_offset = $("#"+target).offset();
+			var target_top = target_offset.top;
+			$('html, body').animate({scrollTop:target_top}, 1500);
+			});
+		});
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#navi > h4').click(function(){
+				$(this).next().slideToggle('slow');
+			});
+		});
+	</script>
 </head>
 
 <body>
-	<div class="main">
-		<div class="codrops-header">
-			<h1 class="header-title">
-				<span class="header-title__main">HOGE and HOGE.</span>
-				<span class="header-title__part">ほげほげ</span>
-				<span class="header-title__sub">hogehoge</span>
-			</h1>
+	<header>
+		<div class="header-menu">
+			<a href="#top" class="scroll">TOP</a>
+			<a href="#about" class="scroll">ABOUT</a>
+			<a href="#activity" class="scroll">ACTIVITY</a>		
+			<a href="#member" class="scroll">MEMBER</a>
+			<a href="#contact" class="scroll">CONTACT</a>
 		</div>
+	</header>
 
-		<div class="intro">
-			<blockquote>
-				<em>“D'où venons-nous ? Que sommes-nous ? Où allons-nous ?”</em>
-				<span>Jimbo Kazuyuki</span>
-			</blockquote>
-		</div>
-
-		<div class="container"></div>
-		
-		<div class="text">
-			<section class="js-section">
-				<h2>
-					<span class="title-up">Overview</span>
-					<span class="title-down">概要</span>
-				</h2>
-
-				<p class="text-intro">『我々はどこから来たのか 我々は何者か 我々はどこへ行くのか』</p>
-				<p>フランスの画家ポール・ゴーギャンが1897年から1898年にかけて描いた絵画。ゴーギャンの作品のうち、最も有名な絵画の1つである。絵画の左上にはフランス語で D'où Venons Nous Que Sommes Nous Où Allons Nous と題名が書かれ、右上には P. Gauguin 1897 と署名および年が書かれている。</p>
-
-				<figure>
-					<img class="js-image" data-pos="0.25" src="img/journey/9.jpg" />
-					<figcaption>これはまったく関係ない道の画像である</figcaption>
-				</figure>
-
-				<h2>
-					<span class="title-up">History</span>
-					<span class="title-down">来歴</span>
-				</h2>
-
-				<p>ゴーギャンは、故郷のフランスよりも素朴で単純な生活を求めて、1891年にタヒチ島に渡った。タヒチ滞在時代の1897年から1898年に描き上げたこの作品は、高度に独自の様式化された神話の世界を描いた他の作品と同様に、ゴーギャンの代表作とされており、ゴーギャンの精神世界を最も描き出している作品と言われている。
-					現在、この作品が所蔵されているボストン美術館のキュレーターは、この絵画の所有者の記録を更新し続けており、これは来歴がまだ完全なものではないことを意味する。最初の記録として、1898年にゴーギャンがこの絵画をフランス人画家・美術収集家ジョルジュ＝ダニエル・ド・モンフレェ（en）に送っているのが確認されている。
-					その後、何人かのパリやヨーロッパの画商、収集家の手に渡り、1936年にニューヨークのマリー・ハリマン・ギャラリーが入手した。ボストン美術館がこの絵画をマリー・ハリマン・ギャラリーから購入したのは、1936年4月16日のことである。
-					この作品は、シカゴ美術館で開催された「セザンヌからピカソまで」という展覧会で、2007年2月17日から5月12日まで展示され、それ以来もと通りボストン美術館に展示されている。</p>
-				
-				<figure>
-					<div class="js-gallery-content">
-						<img src="img/journey/6.jpg" />
-						<img src="img/journey/4.jpg" />
-					</div>
-					<figcaption>これらも関係ない画像だ</figcaption>
-				</figure>
-
-				<p>
-					<blockquote>
-						<em>展覧会でこの絵を見た時、タイトルのかっこよさに、思わずtweetしてしまったのである。</em>
-						<span> &mdash; Sae Kimura</span>
-					</blockquote>
-				</p>
-
-				<h2>
-					<span class="title-up">Member</span>
-					<span class="title-down">メンバー</span>
-				</h2>
-
-				<div class="types">
-					<div class="type">
-						<div class="type-icon">
-							<img src="img/business.png">
-						</div>
-						<h3 class="text-contents">理学</h3>
-					</div>
-			
-					<div class="type">
-						<div class="type-icon">
-							<img src="img/business.png">
-						</div>
-						<h3 class="text-contents">工学</h3>
-					</div>
-			
-					<div class="type">
-						<div class="type-icon">
-							<img src="">
-						</div>
-						<h3 class="text-contents">Business</h3>
-					</div>
-				</div> <!--types end-->
-
-			</section>
-		</div>
-
-		<!-- Related demos -->
-		<section class="content content--related">
-			<p class="info">Filler text from <a href="http://www.gutenberg.org/ebooks/46772">William Bisiker's "Across Iceland"</a></p>
-			<p><strong>If you enjoyed this demo you might also like:</strong></p>
-			<a class="media-item" href="http://tympanus.net/Development/ArticleIntroEffects/">
-				<img class="media-item__img" src="img/related/ArticleIntroEffects.png">
-				<h3 class="media-item__title">Article Intro Effects</h3>
-			</a>
-			<a class="media-item" href="http://tympanus.net/Development/SlidingHeaderLayout/">
-				<img class="media-item__img" src="img/related/SlidingHeaderLayout.jpg">
-				<h3 class="media-item__title">Sliding Header Layout</h3>
-			</a>
-		</section>
+	<div class="codrops-header" id="top">
+		<h1 class="header-title">
+			<span class="header-title-main">Circle Name</span>
+			<span class="header-title-part">サブタイトル的なsomething</span>
+			<span class="header-title-sub">詳細を書きたければここに</span>
+		</h1>
 	</div>
 
-	<!-- /main -->
+	<div class="intro">
+		<blockquote>
+			<em>なんかかっこいい感じの言葉</em>
+			<span>神保くん</span>
+		</blockquote>
+	</div>
+	
+	<div class="contents">
+		<div class="contents-section" id="about">
+			<h2>
+				<span class="title-up">About</span>
+				<span class="title-down">概要</span>
+			</h2>
+
+			<p class="text-intro">小見出しを付けるならこのタグで</p>
+			<p>本文はpタグを使ってね。フランスの画家ポール・ゴーギャンが1897年から1898年にかけて描いた絵画。</p>
+
+			<figure>
+				<img src="img/img1.jpg" />
+				<figcaption>画像サイズの調整も必要かな。このままだとbig book</figcaption>
+			</figure>
+		</div>
+		
+		<div class="contents-section" id="activity">
+			<h2>
+				<span class="title-up">Activity</span>
+				<span class="title-down">活動</span>
+			</h2>
+
+			<p>本文はpタグを使ってね。ゴーギャンは、故郷のフランスよりも素朴で単純な生活を求めて、1891年にタヒチ島に渡った。タヒチ滞在時代の1897年から1898年に描き上げたこの作品は、高度に独自の様式化された神話の世界を描いた他の作品と同様に、ゴーギャンの代表作とされており、ゴーギャンの精神世界を最も描き出している作品と言われている。
+				現在、この作品が所蔵されているボストン美術館のキュレーターは、この絵画の所有者の記録を更新し続けており、これは来歴がまだ完全なものではないことを意味する。最初の記録として、1898年にゴーギャンがこの絵画をフランス人画家・美術収集家ジョルジュ＝ダニエル・ド・モンフレェ（en）に送っているのが確認されている。</p>
+			
+			<figure>
+				<img src="img/6.jpg" />
+				<figcaption>画像の説明</figcaption>
+			</figure>
+		</div>
+
+		<div class="contents-section" id="member">
+			<h2>
+				<span class="title-up">Member</span>
+				<span class="title-down">メンバー</span>
+			</h2>
+
+			<p>3つの分野を融合させてすごいことをやるのです。</p>
+
+			<div class="type">
+				<div class="type-icon">
+					<img src="img/science.png">
+				</div>
+				<div class="type-content">
+					<h3 class="type-name">理学</h3>
+					<p class="type-detail">自然科学の基礎研究の諸分野の総称。物理学、化学、生物学、地球科学、天文学、数学を指す。</p>
+				</div>
+			</div>
+	
+			<div class="type">
+				<div class="type-icon">
+					<img src="img/engineering.png">
+				</div>
+				<div class="type-content">
+					<h3 class="type-name">工学</h3>
+					<p class="type-detail">役に立つ生産物を得るために、計画・設計・製造・検査の段階に基礎的科学を応用する技術の総称。</p>
+				</div>
+			</div>
+	
+			<div class="type">
+				<div class="type-icon">
+					<img src="img/business.png">
+				</div>
+				<div class="type-content">
+					<h3 class="type-name">ビジネス</h3>
+					<p class="type-detail">少し高度な言葉で言うと、「利益を出す」という事を指します。早い話「金を稼ぐこと」になります。</p>
+				</div>
+			</div>
+
+			<!--初期化-->
+			<div class="clear"></div>
+		</div>
+
+		<div class="contents-section" id="contact">
+			<h2>
+				<span class="title-up">Contact</span>
+				<span class="title-down">連絡先</span>
+			</h2>
+
+			<p>連絡先のメアドとかリンクとか。フォーム作る？</p>
+		</div>
+		
+	</div>
+
+	<footer>
+		<p>©hogehoge circle</p>
+	</footer>
+
 	<script src="../dist/app.js"></script>
 </body>
 
