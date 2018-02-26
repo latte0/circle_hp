@@ -1,0 +1,360 @@
+/*変数*/
+$font-body: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-head: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+
+/*フォントの読み込み*/
+@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+/*各種設定*/
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clear {
+	clear: left;
+  }
+
+/*body*/
+body {
+    background: #fff;
+	-webkit-font-smoothing: antialiased; /*フォントのレンダリング設定*/
+	-moz-osx-font-smoothing: grayscale; /*フォントのレンダリング設定*/
+	text-align: center;
+	font-family: $font-body;
+	color: #5d5c56;
+}
+
+a {
+	text-decoration: none;
+	color: #47dbb4;
+	outline: none;
+}
+
+a:hover,
+a:focus {
+	color: #33b996;
+}
+
+/*header bar*/
+header {
+	height: 50px;
+	width: 100%;
+	background-color: rgba(69,129,119,0.9);
+	position :fixed;
+	top: 0;
+	z-index: 1000;
+
+	.header-menu a {
+		font-family: $font-body;
+		font-size: 25px;
+		line-height: 50px;
+		padding: 0 35px;
+		color: black;
+		display: block;
+		float: left;
+		transition: all 0.5s;
+	  }
+	  
+	  .header-menu a:hover {
+		background-color: rgba(255,255,255,0.3);
+	  }
+  }
+  
+/*top*/
+.codrops-header {
+	position: relative;
+	z-index: 900;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh; /*縦幅100％*/
+	min-height: 600px;
+	padding: 2em 1em 4em;
+	text-align: center;
+	color: #fff;
+	background: #181922 url(../img/2.jpg) no-repeat center center;
+	background-size: cover;
+
+	.header-title {
+		position: relative;
+	
+		.header-title-main {
+			font-family: $font-head;
+			font-size: 3em;
+			font-weight: 400;
+			line-height: 1;
+			margin: 0em 0 0.15em 0;
+		}
+		
+		.header-title-part {
+			font-family: $font-head;
+			font-size: 0.85em;
+			font-weight: 400;
+			display: block;
+			padding: 0.5em 0 2em;
+			text-indent: 4px;
+			letter-spacing: 4px;
+			text-transform: uppercase;
+		}
+		
+		.header-title-sub {
+			font-size: 0.7em;
+			font-weight: normal;
+			display: block;
+			margin: 0 auto;
+			padding: 0.5em 0 1em;
+			color: #d1d2d2;
+		}
+	}
+}
+
+/*topの背景を少し暗くする(無くても良い)*/
+.codrops-header::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(24, 25, 34, 0.5);
+}
+
+/*intro*/
+.intro {
+	font-family: $font-head;
+	font-size: 2em;
+	position: relative;
+	z-index: 900;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 110vh;
+	margin: 0;
+	padding: 3em;
+	text-align: center;
+	color: #fff;
+	background: #181922;
+
+	blockquote {
+		margin: 0 auto;
+
+		/*強調する要素*/
+		em {
+			font-size: 1.5em;
+		}
+
+		span {
+			display: block;
+			padding: 1em 0;
+			color: #636969;
+		}
+	}
+}
+
+/*中身*/
+.contents {
+	position: relative;
+	z-index: 900;
+	padding: 5em 10em;
+
+	.contents-section {
+		font-size: 1.25em;
+		line-height: 1.7;
+
+		h2 {
+			font-size: 2.7em;
+			margin: 0;
+			padding-top: 60px; /*ヘッダー分の余白*/
+			text-align: center;
+
+			.title-up {
+				font-size: 0.365em;
+				font-weight: bold;
+				display: block;
+				letter-spacing: 7px;
+				text-transform: uppercase;
+				color: #cecec5;
+			}
+			
+			.title-down {
+				font-family: $font-head;
+				font-size: 1.35em;
+				font-weight: 400;
+				line-height: 0.9;
+				display: block;
+				padding: 0.15em 0 0.35em;
+				color: #5f646c;
+			}
+		}
+
+		/*小見出し*/
+		.text-intro {
+			font-size: 1.3em;
+			font-style: italic;
+			line-height: 1.5;
+			margin: 0.5em 0 1.25em;
+			text-align: center;
+			color: #9d9c95;
+		}
+
+		/*本文*/
+		p {
+			font-size: 1em;
+			margin: 1em 0;
+		}
+
+		/*画像*/
+		figure {
+			margin: 1em 0 2em;
+
+			img {
+				max-width: 100%;
+			}
+
+			/*画像のキャプション*/
+			figcaption {
+				font-size: 1em;
+				font-style: italic;
+				padding: 1em 0;
+				text-align: center;
+				color: #5f646c;
+			}
+		}
+		/*3つ横並びで表示する*/
+		.type {
+			float: left;
+			width: 33%;
+		
+			.type-icon {
+				position: relative;
+			}
+		
+			.type-content{
+				width: 80%;
+				display: inline-block;
+
+				.type-name {
+					font-size: 1.5em;
+					color: #3B444B;
+					margin-top: 5px;
+					margin-bottom: 5px;
+				}
+			
+				.type-detail{
+					font-size: 1em;
+					color: #3B444B;
+					margin-top: 5px;
+					margin-bottom: 30px;
+				}
+			}
+		}
+	}
+}
+
+/*コピーライト*/
+footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+	p {
+		font-size: 20px;
+		color: #727573;
+		text-align: center;
+	}
+}
+
+
+/*レスポンシブ対応*/
+
+@media(max-width: 1280px) {
+	/*ヘッダーの文字サイズを小さく*/
+	header {
+		.header-menu a {
+			font-size: 18px;
+			padding: 0 35px;
+		  }
+	  }
+
+	  .contents {
+		padding: 3em 8em;
+		.contents-section {
+
+			h2 {
+				font-size: 2.3em;
+			}
+
+			/*3つ横並びから縦並びに*/
+			.type {
+				width: 100%;
+				margin: 15px 0;
+
+				.type-content{
+					width: 70%;
+	
+					.type-name {
+						font-size: 1.5em;
+						color: #3B444B;
+						margin-top: 5px;
+						margin-bottom: 5px;
+					}
+				
+					.type-detail{
+						font-size: 1em;
+						color: #3B444B;
+						margin-top: 5px;
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(max-width: 720px) {
+	/*ヘッダーを隠す*/
+	header{
+		display: none;
+	}
+	.codrops-header {
+		.header-title {
+			font-size: 1.5em;
+		}
+	}
+
+	.intro {
+		font-size: 1.25em;
+		padding: 1em;
+		/*height: auto; 幅はおまかせします。110vhのままでも。*/
+	}
+
+	.contents {
+		font-size: 0.85em;
+		padding: 2em;
+
+		.contents-section {
+			width: 100%;
+			max-width: none;
+
+			h2 {
+				font-size: 1.85em;
+				padding-top: 15px; /*ヘッダー分の余白を減らす*/
+			}
+		}
+	}
+
+	footer {
+		p {
+			font-size: 14px;
+		}
+	}
+}
