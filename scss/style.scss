@@ -48,17 +48,17 @@ a:focus {
 header {
 	height: 50px;
 	width: 100%;
-	background-color: rgba(69,129,119,0.9);
+	background-color: rgba(51, 185, 150, 0.9);
 	position :fixed;
 	top: 0;
 	z-index: 1000;
 
 	.header-menu a {
 		font-family: $font-body;
-		font-size: 25px;
+		font-size: 28px;
 		line-height: 50px;
-		padding: 0 35px;
-		color: black;
+		padding: 0 40px;
+		color: rgb(24, 25, 34);
 		display: block;
 		float: left;
 		transition: all 0.5s;
@@ -82,7 +82,7 @@ header {
 	padding: 2em 1em 4em;
 	text-align: center;
 	color: #fff;
-	background: #181922 url(../img/2.jpg) no-repeat center center;
+	background: #181922 url(../img/bg.jpg) no-repeat center center;
 	background-size: cover;
 
 	.header-title {
@@ -116,16 +116,6 @@ header {
 			color: #d1d2d2;
 		}
 	}
-}
-
-/*topの背景を少し暗くする(無くても良い)*/
-.codrops-header::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(24, 25, 34, 0.5);
 }
 
 /*intro*/
@@ -229,11 +219,16 @@ header {
 				text-align: center;
 				color: #5f646c;
 			}
+
+			#img-book{
+				width: 70%;
+			}
 		}
 		/*3つ横並びで表示する*/
 		.type {
 			float: left;
 			width: 33%;
+			margin-top: 5vh;
 		
 			.type-icon {
 				position: relative;
@@ -281,7 +276,7 @@ footer {
 	header {
 		.header-menu a {
 			font-size: 18px;
-			padding: 0 35px;
+			padding: 0 20px;
 		  }
 	  }
 
@@ -334,7 +329,7 @@ footer {
 	.intro {
 		font-size: 1.25em;
 		padding: 1em;
-		/*height: auto; 幅はおまかせします。110vhのままでも。*/
+		height: auto; /*幅はおまかせします。110vhのままでも。*/
 	}
 
 	.contents {
